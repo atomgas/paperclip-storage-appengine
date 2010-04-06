@@ -1,0 +1,21 @@
+h1. Paperclip Storage Appengine
+
+appegine based storage for paperclip, works with http://github.com/atomgas/paperclip-storage-engine
+  
+
+* put the file paperclip_storage_appengine.rb into the lib dir of your rails app 
+* create file config/appengine.yml (see appengine.sample.yml)
+* require "paperclip_storage_appengine.rb" in environment.rb        
+
+and use like this in you models
+ 
+<code lang="ruby">
+  has_attached_file :image, 
+    :storage => :appengine,  
+    :appengine_config => "#{RAILS_ROOT}/config/appengine.yml",
+  ...      
+</code>    
+                       
+h2. Limitations
+
+Filesize for each attachment is 1MB max due to AppEngine's max BLOB size. For general AppEngine limitations see http://code.google.com/appengine/docs/quotas.html

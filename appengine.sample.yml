@@ -1,0 +1,3 @@
+app_id: id of your app on appspot
+# url: you can also use a url to work with appengine on http://localhost:8082
+shared_secret: shared_secret with deployed engine
