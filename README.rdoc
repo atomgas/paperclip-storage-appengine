@@ -1,4 +1,4 @@
-h1. Paperclip Storage Appengine
+= Paperclip Storage Appengine
 
 appegine based storage for paperclip, works with http://github.com/atomgas/paperclip-storage-engine
   
@@ -9,13 +9,13 @@ appegine based storage for paperclip, works with http://github.com/atomgas/paper
 
 and use like this in you models
  
-<code lang="ruby">
+
   has_attached_file :image, 
     :storage => :appengine,  
     :appengine_config => "#{RAILS_ROOT}/config/appengine.yml",
   ...      
-</code>    
+
                        
-h2. Limitations
+== Limitations
 
 Filesize for each attachment is 1MB max due to AppEngine's max BLOB size. For general AppEngine limitations see http://code.google.com/appengine/docs/quotas.html
